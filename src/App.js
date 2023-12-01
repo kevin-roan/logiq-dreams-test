@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Form } from "./components";
-import { Table } from "./components";
+import { Form, Graph } from "./components";
 
 function App() {
   return (

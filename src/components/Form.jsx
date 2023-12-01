@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styled from "@emotion/styled";
 import Table from "./Table";
+import Graph from "./Graph";
 
 function Form() {
   const [isFormUpdate, setFormUpdate] = useState(false);
@@ -21,6 +22,7 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormdata(formData);
+    localStorage.setItem("studentdata", JSON.stringify(formData));
     console.log(formData);
     setFormdata({
       username: "",
@@ -28,7 +30,6 @@ function Form() {
       mark: "",
       dob: "",
     });
-    localStorage.setItem("studentdata", JSON.stringify(formData));
     setFormUpdate(!isFormUpdate);
   };
   return (
